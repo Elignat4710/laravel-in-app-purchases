@@ -51,7 +51,7 @@ class AppStoreServerNotification implements ServerNotificationContract
         return false;
     }
 
-    private function getFirstReceipt()
+    public function getFirstReceipt()
     {
         return $this->notification->getUnifiedReceipt()->getLatestReceiptInfo()[0];
     }
