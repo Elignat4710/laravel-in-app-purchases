@@ -65,7 +65,7 @@ class AppStoreServerNotification implements ServerNotificationContract
      */
     public function isAutoRenewal(): bool
     {
-        return $this->notification->isAutoRenewStatus();
+        return $this->notification->getAutoRenewStatus();
     }
 
     /**
