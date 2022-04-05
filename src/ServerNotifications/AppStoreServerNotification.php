@@ -9,6 +9,7 @@ use Imdhemy\Purchases\Contracts\ServerNotificationContract;
 use Imdhemy\Purchases\Contracts\SubscriptionContract;
 use Imdhemy\Purchases\Subscriptions\AppStoreSubscription;
 use Imdhemy\Purchases\ValueObjects\Time;
+use Imdhemy\AppStore\Receipts\ReceiptResponse;
 
 class AppStoreServerNotification implements ServerNotificationContract
 {
@@ -51,7 +52,10 @@ class AppStoreServerNotification implements ServerNotificationContract
         return false;
     }
 
-    public function getFirstReceipt()
+    /**
+     * @return ReceiptResponse
+     */
+    public function getFirstReceipt(): ReceiptResponse
     {
         return $this->notification->getUnifiedReceipt()->getLatestReceiptInfo()[0];
     }
