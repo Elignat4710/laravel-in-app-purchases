@@ -10,6 +10,7 @@ use Imdhemy\GooglePlay\DeveloperNotifications\DeveloperNotification;
 use Imdhemy\Purchases\Contracts\ServerNotificationContract;
 use Imdhemy\Purchases\Contracts\SubscriptionContract;
 use Imdhemy\Purchases\Subscriptions\GoogleSubscription;
+use Imdhemy\AppStore\Receipts\ReceiptResponse;
 
 /**
  * Class GoogleServerNotification
@@ -77,5 +78,10 @@ class GoogleServerNotification implements ServerNotificationContract
     public function getBundle(): string
     {
         return $this->notification->getPackageName();
+    }
+
+    public function getFirstReceipt(): ReceiptResponse
+    {
+        
     }
 }

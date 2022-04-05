@@ -3,6 +3,8 @@
 
 namespace Imdhemy\Purchases\Contracts;
 
+use Imdhemy\AppStore\Receipts\ReceiptResponse;
+
 /**
  * Interface ServerNotificationContract
  * @package Imdhemy\Purchases\Events\Contracts
@@ -29,4 +31,6 @@ interface ServerNotificationContract
      * @return string
      */
     public function getBundle(): string;
+
+    public function getFirstReceipt(): ReceiptResponse;
 }
