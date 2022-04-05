@@ -9,16 +9,9 @@ use Imdhemy\Purchases\ValueObjects\Time;
 
 class AppStoreSubscription implements SubscriptionContract
 {
-    /**
-     * @var ReceiptInfo
-     */
     private $receipt;
 
-    /**
-     * AppStoreSubscription constructor.
-     * @param ReceiptInfo $receipt
-     */
-    public function __construct(ReceiptInfo $receipt)
+    public function __construct($receipt)
     {
         $this->receipt = $receipt;
     }
